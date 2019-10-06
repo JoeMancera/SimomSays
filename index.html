@@ -214,7 +214,7 @@
           }
         } else {
           //Perdió
-          this.perdioElJuego()
+          this.perdioElJuego(this.nivel)
         }
       }
 
@@ -223,8 +223,8 @@
         .then(this.inicializar)
       }
 
-      perdioElJuego() {
-        swal('Amigo!', 'Lo siento, perdiste!... intentalo de nuevo.', 'error')
+      perdioElJuego(nivel) {
+        swal('Amigo!', "Lo siento, perdiste!... intentalo de nuevo. llegaste al nivel " + nivel, 'error')
         .then(() => {
           this.eliminarEventosClick()
           this.inicializar()
